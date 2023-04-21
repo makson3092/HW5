@@ -78,7 +78,6 @@ function winner(btn) {
 
 function generateButton() {
   let counter = 0;
-
   for (let i = 0; i < 100; i++) {
     counter++;
     let btn = document.createElement("button");
@@ -87,6 +86,7 @@ function generateButton() {
     btn.textContent += counter;
     showMess.textContent = "Спробуйте вгадати загадане число";
     btn.addEventListener("click", () => {
+      btn.disabled = true;
       winner(btn);
     });
   }
